@@ -176,18 +176,14 @@ p6_obj_str__data_init() {
 
     local data_key=$(p6_obj__data__key)
 
-    p6_store_bucket_attr_create "$str" "$data_key" "data"
+    p6_store_scalar_create "$str" "$data_key"
 }
 
-p6_obj__str_data() {
+p6_obj_str__data() {
     local str="$1"
     local new="$2"
 
     local data_key=$(p6_obj__data__key)
 
-    if p6_string_blank "$new"; then
-	p6_store_bucket_attr "$str" "$data_key" "data"
-    else
-	p6_store_bucket_attr "$str" "$data_key" "data" "$new"
-    fi
+    p6_store_scalar_set "$str" "$data_key" "$new"
 }

@@ -300,7 +300,7 @@ p6_obj__dispatch() {
     local method="$2"
     shift 2
 
-    local class=$(p6_obj__class "$obj" "$class")
+    local class=$(p6_obj__class "$obj")
 
     p6_obj_${class}_${method} "$obj" "$@"
 }
@@ -311,7 +311,7 @@ p6_obj__dispatch() {
 p6_obj__create() {
     local class="$1"
 
-    local obj=$(p6_obj__init)
+    local obj=$(p6_obj__init "$class")
 
     p6_obj__meta_init "$obj"
     p6_obj__data_init "$obj"
@@ -363,10 +363,8 @@ p6_obj__class() {
     local new="$2"
 
     local meta_key=$(p6_obj__meta__key)
-    if p6_string_blank "$new"; then
-	p6_store_bucket_attr "$obj" "$meta_key" "class"
-    else
-	p6_store_bucket_attr "$obj" "$meta_key" "class" "$new"
+    if ! p6_string_blank "$new"; then
+	p6_store_hash_set "$obj" "$meta_key" "class" "$new"
     fi
 }
 
@@ -375,12 +373,13 @@ p6_obj__length() {
 
     local meta_key=$(p6_obj__meta__key)
 
-    p6_store_bucket_attr "$obj" "$meta_key" "length"
+    p6_store_hash_get "$obj" "$meta_key" "length"
 }
 
 p6_obj__init() {
+    local class="$1"
 
-    p6_store_create
+    p6_store_create "objs/$class" "4"
 }
 
 p6_obj__meta_init() {
@@ -388,11 +387,11 @@ p6_obj__meta_init() {
 
     local meta_key=$(p6_obj__meta__key)
 
-    p6_store_bucket_create "$obj" "$meta_key"
+    p6_store_hash_create "$obj" "iterators"
 
-    p6_store_bucket_attr_create "$obj" "$meta_key" "class"
-    p6_store_bucket_attr_create "$obj" "$meta_key" "length"
-    p6_store_bucket_hash_create "$obj" "$meta_key" "iterators"
+    p6_store_hash_create "$obj" "$meta_key"
+    p6_store_hash_set "$obj" "$meta_key" "class" "obj"
+    p6_store_hash_set "$obj" "$meta_key" "length" "0"
 }
 
 p6_obj__data_init() {
@@ -400,7 +399,7 @@ p6_obj__data_init() {
 
     local data_key=$(p6_obj__data__key)
 
-    p6_store_bucket_create "$obj" "$data_key"
+    p6_store_hash_create "$obj" "$data_key"
 }
 
 p6_obj__meta__key() {
