@@ -15,11 +15,10 @@
 #<
 #
 # Function:
-#     $list = p6_obj_list_create()
+#	unkown list = p6_obj_list_create()
 #
-#
-# Return(s):
-#    $list - 
+#  Returns:
+#	unkown - list
 #
 #>
 ######################################################################
@@ -38,9 +37,7 @@ p6_obj_list_create() {
 #<
 #
 # Function:
-#      = p6_obj_list_compare()
-#
-#
+#	p6_obj_list_compare()
 #
 #>
 ######################################################################
@@ -57,11 +54,10 @@ p6_obj_list_compare() {
 #<
 #
 # Function:
-#      = p6_obj_list_display(list)
+#	p6_obj_list_display(list)
 #
-# Arg(s):
-#    list - 
-#
+#  Args:
+#	list - 
 #
 #>
 ######################################################################
@@ -77,12 +73,11 @@ p6_obj_list_display() {
 #<
 #
 # Function:
-#      = p6_obj_list_push(list, new)
+#	p6_obj_list_push(list, new)
 #
-# Arg(s):
-#    list - 
-#    new - 
-#
+#  Args:
+#	list - 
+#	new - 
 #
 #>
 ######################################################################
@@ -101,11 +96,10 @@ p6_obj_list_push() {
 #<
 #
 # Function:
-#      = p6_obj_list_pop(list)
+#	p6_obj_list_pop(list)
 #
-# Arg(s):
-#    list - 
-#
+#  Args:
+#	list - 
 #
 #>
 ######################################################################
@@ -124,11 +118,10 @@ p6_obj_list_pop() {
 #<
 #
 # Function:
-#      = p6_obj_list_shift(list)
+#	p6_obj_list_shift(list)
 #
-# Arg(s):
-#    list - 
-#
+#  Args:
+#	list - 
 #
 #>
 ######################################################################
@@ -145,12 +138,11 @@ p6_obj_list_shift() {
 #<
 #
 # Function:
-#      = p6_obj_list_unshift(list, new)
+#	p6_obj_list_unshift(list, new)
 #
-# Arg(s):
-#    list - 
-#    new - 
-#
+#  Args:
+#	list - 
+#	new - 
 #
 #>
 ######################################################################
@@ -168,11 +160,10 @@ p6_obj_list_unshift() {
 #<
 #
 # Function:
-#      = p6_obj_list_swap(list)
+#	p6_obj_list_swap(list)
 #
-# Arg(s):
-#    list - 
-#
+#  Args:
+#	list - 
 #
 #>
 ######################################################################
@@ -192,12 +183,11 @@ p6_obj_list_swap() {
 #<
 #
 # Function:
-#      = p6_obj_list_sort(list, cmp_as)
+#	p6_obj_list_sort(list, [cmp_as=as_string])
 #
-# Arg(s):
-#    list - 
-#    cmp_as - 
-#
+#  Args:
+#	list - 
+#	OPTIONAL cmp_as -  [as_string]
 #
 #>
 ######################################################################
@@ -215,14 +205,14 @@ p6_obj_list_sort() {
 #<
 #
 # Function:
-#     $str = p6_obj_list_join(list, sep)
+#	unkown str = p6_obj_list_join(list, [sep=])
 #
-# Arg(s):
-#    list - 
-#    sep - 
+#  Args:
+#	list - 
+#	OPTIONAL sep -  []
 #
-# Return(s):
-#    $str - 
+#  Returns:
+#	unkown - str
 #
 #>
 ######################################################################
@@ -244,9 +234,7 @@ p6_obj_list_join() {
 #<
 #
 # Function:
-#      = p6_obj_list__compare()
-#
-#
+#	p6_obj_list__compare()
 #
 #>
 ######################################################################
@@ -267,12 +255,11 @@ p6_obj_list__compare() {
 #<
 #
 # Function:
-#      = p6_obj_list_sort__outer(list, cmp_as)
+#	p6_obj_list_sort__outer(list, [cmp_as=as_string])
 #
-# Arg(s):
-#    list - 
-#    cmp_as - 
-#
+#  Args:
+#	list - 
+#	OPTIONAL cmp_as -  [as_string]
 #
 #>
 ######################################################################
@@ -287,13 +274,12 @@ p6_obj_list_sort__outer() {
 #<
 #
 # Function:
-#      = p6_obj_list_sort__inner(list, var, i_item)
+#	p6_obj_list_sort__inner(list, var, i_item)
 #
-# Arg(s):
-#    list - 
-#    var - 
-#    i_item - 
-#
+#  Args:
+#	list - 
+#	var - 
+#	i_item - 
 #
 #>
 ######################################################################
@@ -319,12 +305,11 @@ p6_obj_list_sort__inner() {
 #<
 #
 # Function:
-#      = p6_obj_hash__items_init(hash, list)
+#	p6_obj_hash__items_init(hash, list)
 #
-# Arg(s):
-#    hash - 
-#    list - 
-#
+#  Args:
+#	hash - 
+#	list - 
 #
 #>
 ######################################################################
@@ -338,12 +323,11 @@ p6_obj_hash__items_init() {
 #<
 #
 # Function:
-#      = p6_obj_list__item_data(list, new)
+#	p6_obj_list__item_data(list, new)
 #
-# Arg(s):
-#    list - 
-#    new - 
-#
+#  Args:
+#	list - 
+#	new - 
 #
 #>
 ######################################################################
@@ -362,12 +346,11 @@ p6_obj_list__item_data() {
 #<
 #
 # Function:
-#      = p6_obj_list__insert_at(list, new)
+#	p6_obj_list__insert_at(list, new)
 #
-# Arg(s):
-#    list - 
-#    new - 
-#
+#  Args:
+#	list - 
+#	new - 
 #
 #>
 ######################################################################
@@ -383,11 +366,10 @@ p6_obj_list__insert_at() {
 #<
 #
 # Function:
-#      = p6_obj_list__delete_at(list)
+#	p6_obj_list__delete_at(list)
 #
-# Arg(s):
-#    list - 
-#
+#  Args:
+#	list - 
 #
 #>
 ######################################################################

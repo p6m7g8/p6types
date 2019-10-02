@@ -16,11 +16,10 @@
 #<
 #
 # Function:
-#     $hash = p6_obj_hash_create()
+#	unkown hash = p6_obj_hash_create()
 #
-#
-# Return(s):
-#    $hash - 
+#  Returns:
+#	unkown - hash
 #
 #>
 ######################################################################
@@ -40,9 +39,7 @@ p6_obj_hash_create() {
 #<
 #
 # Function:
-#      = p6_obj_hash_compare()
-#
-#
+#	p6_obj_hash_compare()
 #
 #>
 ######################################################################
@@ -60,11 +57,10 @@ p6_obj_hash_compare() {
 #<
 #
 # Function:
-#      = p6_obj_hash_display(hash)
+#	p6_obj_hash_display(hash)
 #
-# Arg(s):
-#    hash - 
-#
+#  Args:
+#	hash - 
 #
 #>
 ######################################################################
@@ -81,13 +77,13 @@ p6_obj_hash_display() {
 #<
 #
 # Function:
-#     $list = p6_obj_hash_keys(hash)
+#	unkown list = p6_obj_hash_keys(hash)
 #
-# Arg(s):
-#    hash - 
+#  Args:
+#	hash - 
 #
-# Return(s):
-#    $list - 
+#  Returns:
+#	unkown - list
 #
 #>
 ######################################################################
@@ -108,14 +104,14 @@ p6_obj_hash_keys() {
 #<
 #
 # Function:
-#     $item = p6_obj_hash_get(hash, key)
+#	unkown item = p6_obj_hash_get(hash, key)
 #
-# Arg(s):
-#    hash - 
-#    key - 
+#  Args:
+#	hash - 
+#	key - 
 #
-# Return(s):
-#    $item - 
+#  Returns:
+#	unkown - item
 #
 #>
 ######################################################################
@@ -136,13 +132,13 @@ p6_obj_hash_get() {
 #<
 #
 # Function:
-#     $list = p6_obj_hash_values(hash)
+#	unkown list = p6_obj_hash_values(hash)
 #
-# Arg(s):
-#    hash - 
+#  Args:
+#	hash - 
 #
-# Return(s):
-#    $list - 
+#  Returns:
+#	unkown - list
 #
 #>
 ######################################################################
@@ -167,12 +163,11 @@ p6_obj_hash_values() {
 #<
 #
 # Function:
-#      = p6_obj_hash__items_init(hash, list)
+#	p6_obj_hash__items_init(hash, list)
 #
-# Arg(s):
-#    hash - 
-#    list - 
-#
+#  Args:
+#	hash - 
+#	list - 
 #
 #>
 ######################################################################

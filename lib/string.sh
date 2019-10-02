@@ -16,11 +16,10 @@
 #<
 #
 # Function:
-#     $str = p6_obj_str_create()
+#	unkown str = p6_obj_str_create()
 #
-#
-# Return(s):
-#    $str - 
+#  Returns:
+#	unkown - str
 #
 #>
 ######################################################################
@@ -42,9 +41,7 @@ p6_obj_str_create() {
 #<
 #
 # Function:
-#      = p6_obj_str_compare()
-#
-#
+#	p6_obj_str_compare()
 #
 #>
 ######################################################################
@@ -64,11 +61,10 @@ p6_obj_str_compare() {
 #<
 #
 # Function:
-#      = p6_obj_str_display(str)
+#	p6_obj_str_display(str)
 #
-# Arg(s):
-#    str - 
-#
+#  Args:
+#	str - 
 #
 #>
 ######################################################################
@@ -84,14 +80,14 @@ p6_obj_str_display() {
 #<
 #
 # Function:
-#     $list = p6_obj_str_split(str, delim)
+#	unkown list = p6_obj_str_split(str, [delim= ])
 #
-# Arg(s):
-#    str - 
-#    delim - 
+#  Args:
+#	str - 
+#	OPTIONAL delim -  [ ]
 #
-# Return(s):
-#    $list - 
+#  Returns:
+#	unkown - list
 #
 #>
 ######################################################################
@@ -114,12 +110,11 @@ p6_obj_str_split() {
 #<
 #
 # Function:
-#      = p6_obj_str_grep(str, pattern)
+#	p6_obj_str_grep(str, pattern)
 #
-# Arg(s):
-#    str - 
-#    pattern - 
-#
+#  Args:
+#	str - 
+#	pattern - 
 #
 #>
 ######################################################################
@@ -139,13 +134,12 @@ p6_obj_str_grep() {
 #<
 #
 # Function:
-#      = p6_obj_str_substr(str, start, end)
+#	p6_obj_str_substr(str, start, end)
 #
-# Arg(s):
-#    str - 
-#    start - 
-#    end - 
-#
+#  Args:
+#	str - 
+#	start - 
+#	end - 
 #
 #>
 ######################################################################
@@ -167,13 +161,12 @@ p6_obj_str_substr() {
 #<
 #
 # Function:
-#      = p6_obj_str_splice(str, start, new)
+#	p6_obj_str_splice(str, start, new)
 #
-# Arg(s):
-#    str - 
-#    start - 
-#    new - 
-#
+#  Args:
+#	str - 
+#	start - 
+#	new - 
 #
 #>
 ######################################################################
@@ -199,11 +192,10 @@ p6_obj_str_splice() {
 #<
 #
 # Function:
-#      = p6_obj_str_reverse(str)
+#	p6_obj_str_reverse(str)
 #
-# Arg(s):
-#    str - 
-#
+#  Args:
+#	str - 
 #
 #>
 ######################################################################
@@ -223,11 +215,10 @@ p6_obj_str_reverse() {
 #<
 #
 # Function:
-#      = p6_obj_str_trim(str)
+#	p6_obj_str_trim(str)
 #
-# Arg(s):
-#    str - 
-#
+#  Args:
+#	str - 
 #
 #>
 ######################################################################
@@ -247,11 +238,10 @@ p6_obj_str_trim() {
 #<
 #
 # Function:
-#      = p6_obj_str_lc(str)
+#	p6_obj_str_lc(str)
 #
-# Arg(s):
-#    str - 
-#
+#  Args:
+#	str - 
 #
 #>
 ######################################################################
@@ -271,11 +261,10 @@ p6_obj_str_lc() {
 #<
 #
 # Function:
-#      = p6_obj_str_uc(str)
+#	p6_obj_str_uc(str)
 #
-# Arg(s):
-#    str - 
-#
+#  Args:
+#	str - 
 #
 #>
 ######################################################################
@@ -300,11 +289,10 @@ p6_obj_str_uc() {
 #<
 #
 # Function:
-#      = p6_obj_str__data_init(str)
+#	p6_obj_str__data_init(str)
 #
-# Arg(s):
-#    str - 
-#
+#  Args:
+#	str - 
 #
 #>
 ######################################################################
@@ -320,12 +308,11 @@ p6_obj_str__data_init() {
 #<
 #
 # Function:
-#      = p6_obj_str__data(str, new)
+#	p6_obj_str__data(str, new)
 #
-# Arg(s):
-#    str - 
-#    new - 
-#
+#  Args:
+#	str - 
+#	new - 
 #
 #>
 ######################################################################

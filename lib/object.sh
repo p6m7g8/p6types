@@ -31,9 +31,7 @@
 #<
 #
 # Function:
-#      = p6_obj_create()
-#
-#
+#	p6_obj_create()
 #
 #>
 ######################################################################
@@ -49,11 +47,10 @@ p6_obj_create() {
 #<
 #
 # Function:
-#      = p6_obj_copy(obj)
+#	p6_obj_copy(obj)
 #
-# Arg(s):
-#    obj - 
-#
+#  Args:
+#	obj - 
 #
 #>
 ######################################################################
@@ -69,11 +66,10 @@ p6_obj_copy() {
 #<
 #
 # Function:
-#      = p6_obj_destroy(obj)
+#	p6_obj_destroy(obj)
 #
-# Arg(s):
-#    obj - 
-#
+#  Args:
+#	obj - 
 #
 #>
 ######################################################################
@@ -93,9 +89,7 @@ p6_obj_destroy() {
 #<
 #
 # Function:
-#      = p6_obj_compare()
-#
-#
+#	p6_obj_compare()
 #
 #>
 ######################################################################
@@ -116,11 +110,10 @@ p6_obj_compare() {
 #<
 #
 # Function:
-#      = p6_obj_assign(obj)
+#	p6_obj_assign(obj)
 #
-# Arg(s):
-#    obj - 
-#
+#  Args:
+#	obj - 
 #
 #>
 ######################################################################
@@ -140,11 +133,10 @@ p6_obj_assign() {
 #<
 #
 # Function:
-#      = p6_obj_display(obj)
+#	p6_obj_display(obj)
 #
-# Arg(s):
-#    obj - 
-#
+#  Args:
+#	obj - 
 #
 #>
 ######################################################################
@@ -165,12 +157,11 @@ p6_obj_display() {
 #<
 #
 # Function:
-#      = p6_obj_iter_index(obj, var)
+#	p6_obj_iter_index(obj, [var=default])
 #
-# Arg(s):
-#    obj - 
-#    var - 
-#
+#  Args:
+#	obj - 
+#	OPTIONAL var -  [default]
 #
 #>
 ######################################################################
@@ -188,13 +179,12 @@ p6_obj_iter_index() {
 #<
 #
 # Function:
-#      = p6_obj_iter_more(obj, var, offset)
+#	p6_obj_iter_more(obj, [var=default], [offset=0])
 #
-# Arg(s):
-#    obj - 
-#    var - 
-#    offset - 
-#
+#  Args:
+#	obj - 
+#	OPTIONAL var -  [default]
+#	OPTIONAL offset -  [0]
 #
 #>
 ######################################################################
@@ -213,12 +203,11 @@ p6_obj_iter_more() {
 #<
 #
 # Function:
-#      = p6_obj_iter_current(obj, var)
+#	p6_obj_iter_current(obj, [var=default])
 #
-# Arg(s):
-#    obj - 
-#    var - 
-#
+#  Args:
+#	obj - 
+#	OPTIONAL var -  [default]
 #
 #>
 ######################################################################
@@ -238,12 +227,11 @@ p6_obj_iter_current() {
 #<
 #
 # Function:
-#      = p6_obj_iter_i(obj, var)
+#	p6_obj_iter_i(obj, [var=default])
 #
-# Arg(s):
-#    obj - 
-#    var - 
-#
+#  Args:
+#	obj - 
+#	OPTIONAL var -  [default]
 #
 #>
 ######################################################################
@@ -262,13 +250,12 @@ p6_obj_iter_i() {
 #<
 #
 # Function:
-#      = p6_obj_iter_ate(obj, var, move)
+#	p6_obj_iter_ate(obj, [var=default], [move=1])
 #
-# Arg(s):
-#    obj - 
-#    var - 
-#    move - 
-#
+#  Args:
+#	obj - 
+#	OPTIONAL var -  [default]
+#	OPTIONAL move -  [1]
 #
 #>
 ######################################################################
@@ -287,12 +274,11 @@ p6_obj_iter_ate() {
 #<
 #
 # Function:
-#      = p6_obj_foreach(obj, callback)
+#	p6_obj_foreach(obj, callback)
 #
-# Arg(s):
-#    obj - 
-#    callback - 
-#
+#  Args:
+#	obj - 
+#	callback - 
 #
 #>
 ######################################################################
@@ -320,11 +306,10 @@ p6_obj_foreach() {
 #<
 #
 # Function:
-#      = p6_obj_length(obj)
+#	p6_obj_length(obj)
 #
-# Arg(s):
-#    obj - 
-#
+#  Args:
+#	obj - 
 #
 #>
 ######################################################################
@@ -341,12 +326,11 @@ p6_obj_length() {
 #<
 #
 # Function:
-#      = p6_obj_grep(obj, pattern)
+#	p6_obj_grep(obj, pattern)
 #
-# Arg(s):
-#    obj - 
-#    pattern - 
-#
+#  Args:
+#	obj - 
+#	pattern - 
 #
 #>
 ######################################################################
@@ -368,11 +352,10 @@ p6_obj_grep() {
 #<
 #
 # Function:
-#      = p6_obj_reverse(obj)
+#	p6_obj_reverse(obj)
 #
-# Arg(s):
-#    obj - 
-#
+#  Args:
+#	obj - 
 #
 #>
 ######################################################################
@@ -389,13 +372,12 @@ p6_obj_reverse() {
 #<
 #
 # Function:
-#      = p6_obj_splice(obj, start, new)
+#	p6_obj_splice(obj, start, new)
 #
-# Arg(s):
-#    obj - 
-#    start - 
-#    new - 
-#
+#  Args:
+#	obj - 
+#	start - 
+#	new - 
 #
 #>
 ######################################################################
@@ -414,11 +396,10 @@ p6_obj_splice() {
 #<
 #
 # Function:
-#      = p6_obj_trim(obj)
+#	p6_obj_trim(obj)
 #
-# Arg(s):
-#    obj - 
-#
+#  Args:
+#	obj - 
 #
 #>
 ######################################################################
@@ -435,11 +416,10 @@ p6_obj_trim() {
 #<
 #
 # Function:
-#      = p6_obj_lc(obj)
+#	p6_obj_lc(obj)
 #
-# Arg(s):
-#    obj - 
-#
+#  Args:
+#	obj - 
 #
 #>
 ######################################################################
@@ -456,11 +436,10 @@ p6_obj_lc() {
 #<
 #
 # Function:
-#      = p6_obj_uc(obj)
+#	p6_obj_uc(obj)
 #
-# Arg(s):
-#    obj - 
-#
+#  Args:
+#	obj - 
 #
 #>
 ######################################################################
@@ -485,13 +464,12 @@ p6_obj_uc() {
 #<
 #
 # Function:
-#      = p6_obj__iter_more(obj, var, offset)
+#	p6_obj__iter_more(obj, var, offset)
 #
-# Arg(s):
-#    obj - 
-#    var - 
-#    offset - 
-#
+#  Args:
+#	obj - 
+#	var - 
+#	offset - 
 #
 #>
 ######################################################################
@@ -510,12 +488,11 @@ p6_obj__iter_more() {
 #<
 #
 # Function:
-#      = p6_obj__iter_i(obj, var)
+#	p6_obj__iter_i(obj, var)
 #
-# Arg(s):
-#    obj - 
-#    var - 
-#
+#  Args:
+#	obj - 
+#	var - 
 #
 #>
 ######################################################################
@@ -531,11 +508,10 @@ p6_obj__iter_i() {
 #<
 #
 # Function:
-#      = p6_obj__iter_ate(obj)
+#	p6_obj__iter_ate(obj)
 #
-# Arg(s):
-#    obj - 
-#
+#  Args:
+#	obj - 
 #
 #>
 ######################################################################
@@ -552,12 +528,11 @@ p6_obj__iter_ate() {
 #<
 #
 # Function:
-#      = p6_obj__dispatch(obj, method)
+#	p6_obj__dispatch(obj, method)
 #
-# Arg(s):
-#    obj - 
-#    method - 
-#
+#  Args:
+#	obj - 
+#	method - 
 #
 #>
 ######################################################################
@@ -578,13 +553,13 @@ p6_obj__dispatch() {
 #<
 #
 # Function:
-#     $obj = p6_obj__create(class)
+#	unkown obj = p6_obj__create(class)
 #
-# Arg(s):
-#    class - 
+#  Args:
+#	class - 
 #
-# Return(s):
-#    $obj - 
+#  Returns:
+#	unkown - obj
 #
 #>
 ######################################################################
@@ -605,11 +580,10 @@ p6_obj__create() {
 #<
 #
 # Function:
-#      = p6_obj__copy(obj)
+#	p6_obj__copy(obj)
 #
-# Arg(s):
-#    obj - 
-#
+#  Args:
+#	obj - 
 #
 #>
 ######################################################################
@@ -628,12 +602,11 @@ p6_obj__copy() {
 #<
 #
 # Function:
-#      = p6_obj__iter_index(obj, var)
+#	p6_obj__iter_index(obj, var)
 #
-# Arg(s):
-#    obj - 
-#    var - 
-#
+#  Args:
+#	obj - 
+#	var - 
 #
 #>
 ######################################################################
@@ -648,11 +621,10 @@ p6_obj__iter_index() {
 #<
 #
 # Function:
-#      = p6_obj__destroy(obj)
+#	p6_obj__destroy(obj)
 #
-# Arg(s):
-#    obj - 
-#
+#  Args:
+#	obj - 
 #
 #>
 ######################################################################
@@ -666,11 +638,10 @@ p6_obj__destroy() {
 #<
 #
 # Function:
-#      = p6_obj__assign(obj)
+#	p6_obj__assign(obj)
 #
-# Arg(s):
-#    obj - 
-#
+#  Args:
+#	obj - 
 #
 #>
 ######################################################################
@@ -684,12 +655,11 @@ p6_obj__assign() {
 #<
 #
 # Function:
-#      = p6_obj__clone(obj, dst)
+#	p6_obj__clone(obj, dst)
 #
-# Arg(s):
-#    obj - 
-#    dst - 
-#
+#  Args:
+#	obj - 
+#	dst - 
 #
 #>
 ######################################################################
@@ -704,12 +674,11 @@ p6_obj__clone() {
 #<
 #
 # Function:
-#      = p6_obj__class(obj, new)
+#	p6_obj__class(obj, new)
 #
-# Arg(s):
-#    obj - 
-#    new - 
-#
+#  Args:
+#	obj - 
+#	new - 
 #
 #>
 ######################################################################
@@ -727,11 +696,10 @@ p6_obj__class() {
 #<
 #
 # Function:
-#      = p6_obj__length(obj)
+#	p6_obj__length(obj)
 #
-# Arg(s):
-#    obj - 
-#
+#  Args:
+#	obj - 
 #
 #>
 ######################################################################
@@ -747,11 +715,10 @@ p6_obj__length() {
 #<
 #
 # Function:
-#      = p6_obj__init(class)
+#	p6_obj__init(class)
 #
-# Arg(s):
-#    class - 
-#
+#  Args:
+#	class - 
 #
 #>
 ######################################################################
@@ -765,11 +732,10 @@ p6_obj__init() {
 #<
 #
 # Function:
-#      = p6_obj__meta_init(obj)
+#	p6_obj__meta_init(obj)
 #
-# Arg(s):
-#    obj - 
-#
+#  Args:
+#	obj - 
 #
 #>
 ######################################################################
@@ -789,11 +755,10 @@ p6_obj__meta_init() {
 #<
 #
 # Function:
-#      = p6_obj__data_init(obj)
+#	p6_obj__data_init(obj)
 #
-# Arg(s):
-#    obj - 
-#
+#  Args:
+#	obj - 
 #
 #>
 ######################################################################
@@ -809,11 +774,10 @@ p6_obj__data_init() {
 #<
 #
 # Function:
-#     meta = p6_obj__meta__key()
+#	unkown meta = p6_obj__meta__key()
 #
-#
-# Return(s):
-#    meta - 
+#  Returns:
+#	unkown - meta
 #
 #>
 ######################################################################
@@ -826,11 +790,10 @@ p6_obj__meta__key() {
 #<
 #
 # Function:
-#     data = p6_obj__data__key()
+#	unkown data = p6_obj__data__key()
 #
-#
-# Return(s):
-#    data - 
+#  Returns:
+#	unkown - data
 #
 #>
 ######################################################################
