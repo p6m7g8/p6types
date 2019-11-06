@@ -258,7 +258,7 @@ p6_obj_list__compare() {
 #	p6_obj_list_sort__outer(list, [cmp_as=as_string])
 #
 #  Args:
-#	list - 
+#	list -
 #	OPTIONAL cmp_as -  [as_string]
 #
 #>

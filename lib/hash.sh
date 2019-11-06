@@ -60,7 +60,7 @@ p6_obj_hash_compare() {
 #	p6_obj_hash_display(hash)
 #
 #  Args:
-#	hash - 
+#	hash -
 #
 #>
 ######################################################################
@@ -80,7 +80,7 @@ p6_obj_hash_display() {
 #	unkown list = p6_obj_hash_keys(hash)
 #
 #  Args:
-#	hash - 
+#	hash -
 #
 #  Returns:
 #	unkown - list
@@ -107,8 +107,8 @@ p6_obj_hash_keys() {
 #	unkown item = p6_obj_hash_get(hash, key)
 #
 #  Args:
-#	hash - 
-#	key - 
+#	hash -
+#	key -
 #
 #  Returns:
 #	unkown - item
@@ -135,7 +135,7 @@ p6_obj_hash_get() {
 #	unkown list = p6_obj_hash_values(hash)
 #
 #  Args:
-#	hash - 
+#	hash -
 #
 #  Returns:
 #	unkown - list
