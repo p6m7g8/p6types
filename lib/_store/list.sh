@@ -42,11 +42,12 @@ p6_store_list_create() {
 #<
 #
 # Function:
-#	p6_store_list_get(store, name)
+#	p6_store_list_get(store, name, i)
 #
 #  Args:
 #	store - the store
 #	name - the name of the list
+#	i - index of list item to return
 #
 #>
 ######################################################################
@@ -155,11 +156,12 @@ p6_store_list_item_delete() {
 #<
 #
 # Function:
-#	p6_store_list_delete(store, name)
+#	p6_store_list_delete(store, name, i)
 #
 #  Args:
 #	store - the store
 #	name - the name of the list
+#	i - index of item to delete
 #
 #>
 ######################################################################

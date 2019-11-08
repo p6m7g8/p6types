@@ -103,7 +103,11 @@ p6_obj_destroy() {
 #<
 #
 # Function:
-#	size_t rc = p6_obj_compare()
+#	size_t rc = p6_obj_compare(a, b)
+#
+#  Args:
+#	a - 
+#	b - 
 #
 #  Returns:
 #	size_t - rc
@@ -292,11 +296,12 @@ p6_obj_iter_more() {
 #<
 #
 # Function:
-#	p6_obj_iter_i(obj, [var=default])
+#	p6_obj_iter_i(obj, [var=default], i)
 #
 #  Args:
 #	obj - 
 #	OPTIONAL var -  [default]
+#	i - 
 #
 #>
 ######################################################################
