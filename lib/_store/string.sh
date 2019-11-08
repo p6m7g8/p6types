@@ -1,3 +1,14 @@
+######################################################################
+#<
+#
+# Function:
+#	p6_store_string__debug(msg)
+#
+#  Args:
+#	msg - 
+#
+#>
+######################################################################
 p6_store_string__debug() {
     local msg="$1"
 
@@ -10,11 +21,11 @@ p6_store_string__debug() {
 #<
 #
 # Function:
-#	p6_store_scalar_create(store, name)
+#	p6_store_string_create(store, name)
 #
 #  Args:
 #	store - the store
-#	name - the name of the scalar
+#	name - the name of the string
 #
 #>
 ######################################################################

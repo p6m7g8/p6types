@@ -1,3 +1,14 @@
+######################################################################
+#<
+#
+# Function:
+#	p6_store_iter__debug(msg)
+#
+#  Args:
+#	msg - 
+#
+#>
+######################################################################
 p6_store_iter__debug() {
     local msg="$1"
 
@@ -6,6 +17,18 @@ p6_store_iter__debug() {
     p6_return_void
 }
 
+######################################################################
+#<
+#
+# Function:
+#	p6_iter_create(store, name)
+#
+#  Args:
+#	store - the store
+#	name - the name of the iterator
+#
+#>
+######################################################################
 p6_iter_create() {
     local store="$1" # the store
     local name="$2"  # the name of the iterator
@@ -20,6 +43,17 @@ p6_iter_create() {
     p6_return_void
 }
 
+######################################################################
+#<
+#
+# Function:
+#	p6_iter_destroy(obj)
+#
+#  Args:
+#	obj - 
+#
+#>
+######################################################################
 p6_iter_destroy() {
     local obj="$1"
 
@@ -28,6 +62,21 @@ p6_iter_destroy() {
     p6_return_void
 }
 
+######################################################################
+#<
+#
+# Function:
+#	size_t val = p6_iter_current(store, name)
+#
+#  Args:
+#	store - the store
+#	name - the name of the iterator
+#
+#  Returns:
+#	size_t - val: value of the iterator
+#
+#>
+######################################################################
 p6_iter_current() {
     local store="$1" # the store
     local name="$2"  # the name of the iterator
@@ -38,6 +87,19 @@ p6_iter_current() {
     p6_return_size_t "$val" # value of the iterator
 }
 
+######################################################################
+#<
+#
+# Function:
+#	p6_iter_move(store, name, delta)
+#
+#  Args:
+#	store - the store
+#	name - the name of the scalar
+#	delta - iterate by delta
+#
+#>
+######################################################################
 p6_iter_move() {
     local store="$1" # the store
     local name="$2"  # the name of the scalar

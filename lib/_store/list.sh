@@ -1,3 +1,14 @@
+######################################################################
+#<
+#
+# Function:
+#	p6_store_list__debug(msg)
+#
+#  Args:
+#	msg - 
+#
+#>
+######################################################################
 p6_store_list__debug() {
     local msg="$1"
 
@@ -31,14 +42,11 @@ p6_store_list_create() {
 #<
 #
 # Function:
-#	item_ref item = p6_store_list_get(store, name)
+#	p6_store_list_get(store, name)
 #
 #  Args:
 #	store - the store
 #	name - the name of the list
-#
-#  Returns:
-#	item_ref - item: the item
 #
 #>
 ######################################################################
@@ -147,14 +155,11 @@ p6_store_list_item_delete() {
 #<
 #
 # Function:
-#	item_ref old = p6_store_list_delete(store, name)
+#	p6_store_list_delete(store, name)
 #
 #  Args:
 #	store - the store
 #	name - the name of the list
-#
-#  Returns:
-#	item_ref - old: old item
 #
 #>
 ######################################################################
@@ -179,15 +184,15 @@ p6_store_list_delete() {
 #<
 #
 # Function:
-#	unkown next = p6_store_list__i(disk_dir, [next=])
+#	size_t next = p6_store_list__i(disk_dir, [next=])
 #
 #  Args:
 #	disk_dir - path to on disk location
 #	OPTIONAL next - optional next value []
 #
 #  Returns:
-#	unkown - next: new i value
-#	unkown - i_val: i's value
+#	size_t - next: new i value
+#	size_t - i_val: i's value
 #
 #>
 ######################################################################

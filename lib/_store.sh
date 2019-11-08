@@ -1,4 +1,3 @@
-##############################################################################
 #
 # Store
 # [store]
@@ -13,8 +12,15 @@
 #   [i]:/
 #     data: item data
 #
-##############################################################################
 
+######################################################################
+#<
+#
+# Function:
+#	p6_store__debug()
+#
+#>
+######################################################################
 p6_store__debug() {
     local msg="$1"
 
@@ -27,14 +33,11 @@ p6_store__debug() {
 #<
 #
 # Function:
-#	obj_ref store = p6_store_create(name, max_objs)
+#	p6_store_create(name, max_objs)
 #
 #  Args:
 #	name - name of store
 #	max_objs - max objects
-#
-#  Returns:
-#	obj_ref - store: reference to object store
 #
 #>
 #/ Synopsis:
@@ -73,13 +76,10 @@ p6_store_destroy() {
 #<
 #
 # Function:
-#	obj_ref ref = p6_store_ref(store)
+#	p6_store_ref(store)
 #
 #  Args:
 #	store - store to find ref of
-#
-#  Returns:
-#	obj_ref - ref: ref to store
 #
 #>
 ######################################################################
@@ -95,13 +95,10 @@ p6_store_ref() {
 #<
 #
 # Function:
-#	obj_ref copy = p6_store_copy(store)
+#	p6_store_copy(store)
 #
 #  Args:
 #	store - store to copy
-#
-#  Returns:
-#	obj_ref - copy: copied store
 #
 #>
 ######################################################################
@@ -121,7 +118,7 @@ p6_store_copy() {
 #
 #  Args:
 #	store - the store
-#	name - the name of the list
+#	name - the 'bucket' name
 #
 #>
 ######################################################################
