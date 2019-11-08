@@ -250,7 +250,7 @@ p6_obj_iter_index() {
   local obj="$1"
   local var="${2:-default}"
 
-  local index=$(p6_iter_current "$obj" "$var")
+  local index=$(p6_store_iter_current "$obj" "$var")
 
   p6_return_size_t "$index"
 }
@@ -274,8 +274,8 @@ p6_obj_iter_more() {
   local obj="$1"
   local var="${2:-default}"
 
-  if ! p6_iter_exists "$obj" "$var"; then
-    p6_iter_create "$obj" "$var"
+  if ! p6_store_iter_exists "$obj" "$var"; then
+    p6_store_iter_create "$obj" "$var"
   fi
 
   local index=$(p6_obj_iter_index "$obj" "$var")
@@ -284,7 +284,7 @@ p6_obj_iter_more() {
   local bool=$(p6_math_le "$index" "$len")
 
   if ! $bool; then
-    p6_iter_destroy "$obj" "$var"
+    p6_store_iter_destroy "$obj" "$var"
   fi
 
   p6_obj__debug "iter_more(): [var=$var] [index=$index] [len=$len] -> [bool=$bool]"
@@ -355,7 +355,7 @@ p6_obj_iter_ate() {
   local var="${2:-default}"
   local move="${3:-1}"
 
-  p6_iter_move "$obj" "$var" "$move"
+  p6_store_iter_move "$obj" "$var" "$move"
 
   p6_return_void
 }

@@ -9,7 +9,7 @@
 #
 #>
 ######################################################################
-p6_store_has__debug() {
+p6_store_hash__debug() {
     local msg="$1"
 
     p6_debug "p6_store_hash: $msg"

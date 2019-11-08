@@ -21,7 +21,7 @@ p6_store_iter__debug() {
 #<
 #
 # Function:
-#	p6_iter_create(store, name)
+#	p6_store_iter_create(store, name)
 #
 #  Args:
 #	store - the store
@@ -29,7 +29,7 @@ p6_store_iter__debug() {
 #
 #>
 ######################################################################
-p6_iter_create() {
+p6_store_iter_create() {
     local store="$1" # the store
     local name="$2"  # the name of the iterator
 
@@ -47,14 +47,14 @@ p6_iter_create() {
 #<
 #
 # Function:
-#	p6_iter_destroy(obj)
+#	p6_store_iter_destroy(obj)
 #
 #  Args:
 #	obj - 
 #
 #>
 ######################################################################
-p6_iter_destroy() {
+p6_store_iter_destroy() {
     local obj="$1"
 
     p6_store_destroy "$obj"
@@ -66,7 +66,7 @@ p6_iter_destroy() {
 #<
 #
 # Function:
-#	size_t val = p6_iter_current(store, name)
+#	size_t val = p6_store_iter_current(store, name)
 #
 #  Args:
 #	store - the store
@@ -77,7 +77,7 @@ p6_iter_destroy() {
 #
 #>
 ######################################################################
-p6_iter_current() {
+p6_store_iter_current() {
     local store="$1" # the store
     local name="$2"  # the name of the iterator
 
@@ -91,7 +91,7 @@ p6_iter_current() {
 #<
 #
 # Function:
-#	p6_iter_move(store, name, delta)
+#	p6_store_iter_move(store, name, delta)
 #
 #  Args:
 #	store - the store
@@ -100,7 +100,7 @@ p6_iter_current() {
 #
 #>
 ######################################################################
-p6_iter_move() {
+p6_store_iter_move() {
     local store="$1" # the store
     local name="$2"  # the name of the scalar
     local delta="$3" # iterate by delta
