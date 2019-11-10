@@ -31,11 +31,14 @@ p6_store__debug() {
 ######################################################################
 #<
 #
-# Function: p6_store_create(name, max_objs)
+# Function: obj store = p6_store_create(name, max_objs)
 #
 #  Args:
 #	name - name of store
 #	max_objs - max objects
+#
+#  Returns:
+#	obj - store: reference to object store
 #
 #>
 #/ Synopsis:
@@ -72,10 +75,13 @@ p6_store_destroy() {
 ######################################################################
 #<
 #
-# Function: p6_store_ref(store)
+# Function: obj ref = p6_store_ref(store)
 #
 #  Args:
 #	store - store to find ref of
+#
+#  Returns:
+#	obj - ref: ref to store
 #
 #>
 ######################################################################
@@ -90,10 +96,13 @@ p6_store_ref() {
 ######################################################################
 #<
 #
-# Function: p6_store_copy(store)
+# Function: obj copy = p6_store_copy(store)
 #
 #  Args:
 #	store - store to copy
+#
+#  Returns:
+#	obj - copy: copied store
 #
 #>
 ######################################################################

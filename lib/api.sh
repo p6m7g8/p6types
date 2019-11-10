@@ -36,11 +36,14 @@ p6_obj__debug() {
 ######################################################################
 #<
 #
-# Function: p6_obj_create([class=obj], [max_objs=])
+# Function: obj obj = p6_obj_create([class=obj], [max_objs=])
 #
 #  Args:
 #	OPTIONAL class -  [obj]
 #	OPTIONAL max_objs -  []
+#
+#  Returns:
+#	obj - obj
 #
 #>
 ######################################################################
@@ -58,10 +61,13 @@ p6_obj_create() {
 ######################################################################
 #<
 #
-# Function: p6_obj_copy(obj)
+# Function: obj copy = p6_obj_copy(obj)
 #
 #  Args:
 #	obj - 
+#
+#  Returns:
+#	obj - copy
 #
 #>
 ######################################################################
@@ -121,10 +127,13 @@ p6_obj_compare() {
 ######################################################################
 #<
 #
-# Function: p6_obj_assign(obj)
+# Function: obj obj = p6_obj_assign(obj)
 #
 #  Args:
 #	obj - 
+#
+#  Returns:
+#	obj - obj
 #
 #>
 ######################################################################
@@ -430,11 +439,14 @@ p6_obj_length() {
 ######################################################################
 #<
 #
-# Function: p6_obj_grep(obj, pattern)
+# Function: obj rlist = p6_obj_grep(obj, pattern)
 #
 #  Args:
 #	obj - 
 #	pattern - 
+#
+#  Returns:
+#	obj - rlist
 #
 #>
 ######################################################################
