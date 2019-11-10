@@ -37,18 +37,17 @@ p6_obj__debug() {
 ######################################################################
 #<
 #
-# Function:
-#	p6_obj_create(class, [max_objs=4])
+# Function: p6_obj_create([class=obj], [max_objs=])
 #
 #  Args:
-#	class - 
-#	OPTIONAL max_objs -  [4]
+#	OPTIONAL class -  [obj]
+#	OPTIONAL max_objs -  []
 #
 #>
 ######################################################################
 p6_obj_create() {
-  local class="$1"
-  local max_objs="${2:-4}"
+  local class="${1:-obj}"
+  local max_objs="${2:-}"
 
   local obj=$(p6_store_create "objs/$class" "$max_objs")
   p6_obj__meta_init "$obj" "$class"
