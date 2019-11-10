@@ -14,7 +14,25 @@ main() {
 
     p6_test_setup "0"
 
-    p6_test_start "p6_obj_create"
+    p6_test_start "p6_obj_item_get"
+    (
+	true
+    )
+    p6_test_finish
+
+    p6_test_start "p6_obj_item_set"
+    (
+	true
+    )
+    p6_test_finish
+
+    p6_test_start "p6_obj_item_add"
+    (
+	true
+    )
+    p6_test_finish
+
+    p6_test_start "p6_obj_item_delete"
     (
 	true
     )

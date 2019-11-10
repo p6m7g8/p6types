@@ -14,7 +14,13 @@ main() {
 
     p6_test_setup "0"
 
-    p6_test_start "p6_obj_display"
+    p6_test_start "p6_obj_length"
+    (
+	true
+    )
+    p6_test_finish
+
+    p6_test_start "p6_obj_grep"
     (
 	true
     )

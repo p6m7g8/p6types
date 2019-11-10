@@ -14,7 +14,37 @@ main() {
 
     p6_test_setup "0"
 
-    p6_test_start "p6_obj_iter_create"
+    p6_test_start "p6_obj_iter_index"
+    (
+	true
+    )
+    p6_test_finish
+
+    p6_test_start "p6_obj_iter_more"
+    (
+	true
+    )
+    p6_test_finish
+
+    p6_test_start "p6_obj_iter_i"
+    (
+	true
+    )
+    p6_test_finish
+
+    p6_test_start "p6_obj_iter_current"
+    (
+	true
+    )
+    p6_test_finish
+
+    p6_test_start "p6_obj_iter_ate"
+    (
+	true
+    )
+    p6_test_finish
+
+    p6_test_start "p6_obj_iter_foreach"
     (
 	true
     )
