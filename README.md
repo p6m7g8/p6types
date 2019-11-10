@@ -1,7 +1,6 @@
 # p6m7g8/p6types
 
 ## Functions
-
 ### _store.sh:
 - obj copy = p6_store_copy(store)
 - obj ref = p6_store_ref(store)
@@ -21,9 +20,9 @@
 - size_t val = p6_store_iter_current(store, name)
 
 ### list.sh:
+- item item = p6_store_list_get(store, name, i)
+- item old = p6_store_list_delete(store, name, i)
 - p6_store_list_create(store, name)
-- p6_store_list_delete(store, name, i)
-- p6_store_list_get(store, name, i)
 - size_t j = p6_store_list_item_delete(store, name, old)
 - str i_val = p6_store_list_add(store, name, new)
 
@@ -39,6 +38,8 @@
 
 ### api.sh:
 - bool ool = p6_obj_iter_more(obj, [var=default])
+- item item = p6_obj_iter_current(obj, [var=default])
+- item item = p6_obj_iter_i(obj, [var=default], i)
 - obj copy = p6_obj_copy(obj)
 - obj obj = p6_obj_assign(obj)
 - obj obj = p6_obj_create([class=obj], [max_objs=])
@@ -50,9 +51,7 @@
 - p6_obj_item_get(obj)
 - p6_obj_item_set(obj)
 - p6_obj_iter_ate(obj, [var=default], [move=1])
-- p6_obj_iter_current(obj, [var=default])
 - p6_obj_iter_foreach(obj, var, callback)
-- p6_obj_iter_i(obj, [var=default], i)
 - p6_obj_lc(obj)
 - p6_obj_reverse(obj)
 - p6_obj_splice(obj, start, new)
@@ -66,3 +65,4 @@
 ### p6_return.sh:
 - p6_return_item(item)
 - p6_return_obj()
+

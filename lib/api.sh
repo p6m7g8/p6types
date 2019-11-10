@@ -291,12 +291,15 @@ p6_obj_iter_more() {
 ######################################################################
 #<
 #
-# Function: p6_obj_iter_i(obj, [var=default], i)
+# Function: item item = p6_obj_iter_i(obj, [var=default], i)
 #
 #  Args:
 #	obj - 
 #	OPTIONAL var -  [default]
 #	i - 
+#
+#  Returns:
+#	item - item
 #
 #>
 ######################################################################
@@ -313,11 +316,14 @@ p6_obj_iter_i() {
 ######################################################################
 #<
 #
-# Function: p6_obj_iter_current(obj, [var=default])
+# Function: item item = p6_obj_iter_current(obj, [var=default])
 #
 #  Args:
 #	obj - 
 #	OPTIONAL var -  [default]
+#
+#  Returns:
+#	item - item
 #
 #>
 ######################################################################
