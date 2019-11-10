@@ -411,8 +411,11 @@ p6_obj_class() {
 
   local meta_key=$(p6_obj__meta__key)
 
+  local old_class
   if ! p6_string_blank "$new"; then
-      local old_class=$(p6_store_hash_set "$obj" "$meta_key" "class" "$new")
+    old_class=$(p6_store_hash_set "$obj" "$meta_key" "class" "$new")
+  else
+    old_class=$(p6_store_hash_set "$obj" "$meta_key" "class")
   fi
 
   p6_return_str "$old_class"
