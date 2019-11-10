@@ -1,8 +1,7 @@
 ######################################################################
 #<
 #
-# Function:
-#	p6_store_iter__debug(msg)
+# Function: p6_store_iter__debug(msg)
 #
 #  Args:
 #	msg - 
@@ -20,8 +19,7 @@ p6_store_iter__debug() {
 ######################################################################
 #<
 #
-# Function:
-#	p6_store_iter_create(store, name)
+# Function: p6_store_iter_create(store, name)
 #
 #  Args:
 #	store - the store
@@ -46,8 +44,7 @@ p6_store_iter_create() {
 ######################################################################
 #<
 #
-# Function:
-#	p6_store_iter_destroy(obj)
+# Function: p6_store_iter_destroy(obj)
 #
 #  Args:
 #	obj - 
@@ -65,8 +62,7 @@ p6_store_iter_destroy() {
 ######################################################################
 #<
 #
-# Function:
-#	size_t val = p6_store_iter_current(store, name)
+# Function: size_t val = p6_store_iter_current(store, name)
 #
 #  Args:
 #	store - the store
@@ -90,8 +86,7 @@ p6_store_iter_current() {
 ######################################################################
 #<
 #
-# Function:
-#	p6_store_iter_move(store, name, delta)
+# Function: p6_store_iter_move(store, name, delta)
 #
 #  Args:
 #	store - the store

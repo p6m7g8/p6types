@@ -1,8 +1,7 @@
 ######################################################################
 #<
 #
-# Function:
-#	p6_store_has__debug(msg)
+# Function: p6_store_hash__debug(msg)
 #
 #  Args:
 #	msg - 
@@ -20,8 +19,7 @@ p6_store_hash__debug() {
 ######################################################################
 #<
 #
-# Function:
-#	p6_store_hash_create(store, name)
+# Function: p6_store_hash_create(store, name)
 #
 #  Args:
 #	store - the store
@@ -40,8 +38,7 @@ p6_store_hash_create() {
 ######################################################################
 #<
 #
-# Function:
-#	str val = p6_store_hash_get(store, name, key)
+# Function: str val = p6_store_hash_get(store, name, key)
 #
 #  Args:
 #	store - the store
@@ -74,8 +71,7 @@ p6_store_hash_get() {
 ######################################################################
 #<
 #
-# Function:
-#	str old = p6_store_hash_set(store, name, key, val)
+# Function: str old = p6_store_hash_set(store, name, key, val)
 #
 #  Args:
 #	store - the store
@@ -115,8 +111,7 @@ p6_store_hash_set() {
 ######################################################################
 #<
 #
-# Function:
-#	str old_val = p6_store_hash_delete(store, name, key)
+# Function: str old_val = p6_store_hash_delete(store, name, key)
 #
 #  Args:
 #	store - the store

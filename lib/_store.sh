@@ -16,8 +16,7 @@
 ######################################################################
 #<
 #
-# Function:
-#	p6_store__debug()
+# Function: p6_store__debug()
 #
 #>
 ######################################################################
@@ -32,8 +31,7 @@ p6_store__debug() {
 ######################################################################
 #<
 #
-# Function:
-#	p6_store_create(name, max_objs)
+# Function: p6_store_create(name, max_objs)
 #
 #  Args:
 #	name - name of store
@@ -56,8 +54,7 @@ p6_store_create() {
 ######################################################################
 #<
 #
-# Function:
-#	p6_store_destroy(store)
+# Function: p6_store_destroy(store)
 #
 #  Args:
 #	store - ref to store to delete
@@ -75,8 +72,7 @@ p6_store_destroy() {
 ######################################################################
 #<
 #
-# Function:
-#	p6_store_ref(store)
+# Function: p6_store_ref(store)
 #
 #  Args:
 #	store - store to find ref of
@@ -94,8 +90,7 @@ p6_store_ref() {
 ######################################################################
 #<
 #
-# Function:
-#	p6_store_copy(store)
+# Function: p6_store_copy(store)
 #
 #  Args:
 #	store - store to copy
@@ -113,8 +108,7 @@ p6_store_copy() {
 ######################################################################
 #<
 #
-# Function:
-#	p6_store__init_structure(store, name)
+# Function: p6_store__init_structure(store, name)
 #
 #  Args:
 #	store - the store
@@ -135,8 +129,7 @@ p6_store__init_structure() {
 ######################################################################
 #<
 #
-# Function:
-#	path dir = p6_store__disk(store, name)
+# Function: path dir = p6_store__disk(store, name)
 #
 #  Args:
 #	store - the store

@@ -1,8 +1,7 @@
 ######################################################################
 #<
 #
-# Function:
-#	p6_store_scalar__debug(msg)
+# Function: p6_store_scalar__debug(msg)
 #
 #  Args:
 #	msg - 
@@ -20,8 +19,7 @@ p6_store_scalar__debug() {
 ######################################################################
 #<
 #
-# Function:
-#	p6_store_scalar_create(store, name)
+# Function: p6_store_scalar_create(store, name)
 #
 #  Args:
 #	store - the store
@@ -41,8 +39,7 @@ p6_store_scalar_create() {
 ######################################################################
 #<
 #
-# Function:
-#	str val = p6_store_scalar_get(store, name)
+# Function: str val = p6_store_scalar_get(store, name)
 #
 #  Args:
 #	store - the store
@@ -66,8 +63,7 @@ p6_store_scalar_get() {
 ######################################################################
 #<
 #
-# Function:
-#	str val = p6_store_scalar_set(store, name, new)
+# Function: str val = p6_store_scalar_set(store, name, new)
 #
 #  Args:
 #	store - the store

@@ -1,8 +1,7 @@
 ######################################################################
 #<
 #
-# Function:
-#	p6_store_list__debug(msg)
+# Function: p6_store_list__debug(msg)
 #
 #  Args:
 #	msg - 
@@ -20,8 +19,7 @@ p6_store_list__debug() {
 ######################################################################
 #<
 #
-# Function:
-#	p6_store_list_create(store, name)
+# Function: p6_store_list_create(store, name)
 #
 #  Args:
 #	store - the store
@@ -41,8 +39,7 @@ p6_store_list_create() {
 ######################################################################
 #<
 #
-# Function:
-#	p6_store_list_get(store, name, i)
+# Function: p6_store_list_get(store, name, i)
 #
 #  Args:
 #	store - the store
@@ -69,8 +66,7 @@ p6_store_list_get() {
 ######################################################################
 #<
 #
-# Function:
-#	str i_val = p6_store_list_add(store, name, new)
+# Function: str i_val = p6_store_list_add(store, name, new)
 #
 #  Args:
 #	store - the store
@@ -112,8 +108,7 @@ p6_store_list_add() {
 ######################################################################
 #<
 #
-# Function:
-#	size_t j = p6_store_list_item_delete(store, name, old)
+# Function: size_t j = p6_store_list_item_delete(store, name, old)
 #
 #  Args:
 #	store - the store
@@ -155,8 +150,7 @@ p6_store_list_item_delete() {
 ######################################################################
 #<
 #
-# Function:
-#	p6_store_list_delete(store, name, i)
+# Function: p6_store_list_delete(store, name, i)
 #
 #  Args:
 #	store - the store
@@ -185,8 +179,7 @@ p6_store_list_delete() {
 ######################################################################
 #<
 #
-# Function:
-#	size_t next = p6_store_list__i(disk_dir, [next=])
+# Function: size_t next = p6_store_list__i(disk_dir, [next=])
 #
 #  Args:
 #	disk_dir - path to on disk location
