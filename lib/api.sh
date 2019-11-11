@@ -161,6 +161,19 @@ p6_obj_display() {
   p6_return_void
 }
 
+######################################################################
+#<
+#
+# Function: code rc = p6_obj_is(obj)
+#
+#  Args:
+#	obj - 
+#
+#  Returns:
+#	code - rc
+#
+#>
+######################################################################
 p6_obj_is() {
     local obj="$1"
 
@@ -190,10 +203,13 @@ p6_obj_item_get() {
 ######################################################################
 #<
 #
-# Function: p6_obj_item_set(obj)
+# Function: str old_val = p6_obj_item_set(obj)
 #
 #  Args:
 #	obj - 
+#
+#  Returns:
+#	str - old_val
 #
 #>
 ######################################################################
@@ -201,7 +217,11 @@ p6_obj_item_set() {
   local obj="$1"
   shift 1
 
-  p6_obj__dispatch "$obj" "item_set" "$@"
+  local length=$(p6_obj_length "$obj")
+  local old_val=$(p6_obj__dispatch "$obj" "item_set" "$@")
+  p6_obj_length "$obj" "$(($length+1))"
+
+  p6_return_str "$old_val"
 }
 
 ######################################################################
@@ -256,7 +276,13 @@ p6_obj_iter_index() {
   local obj="$1"
   local var="${2:-default}"
 
+  if ! p6_store_iter_exists "$obj" "$var"; then
+      p6_store_iter_create "$obj" "$var"
+  fi
+
+  p6_obj__debug "iter_index(): [obj=$obj] [var=$var]"
   local index=$(p6_store_iter_current "$obj" "$var")
+  p6_obj__debug "iter_index():  -> [index=$index]"
 
   p6_return_size_t "$index"
 }
@@ -264,14 +290,14 @@ p6_obj_iter_index() {
 ######################################################################
 #<
 #
-# Function: bool ool = p6_obj_iter_more(obj, [var=default])
+# Function: code rc = p6_obj_iter_more(obj, [var=default])
 #
 #  Args:
 #	obj - 
 #	OPTIONAL var -  [default]
 #
 #  Returns:
-#	bool - ool
+#	code - rc
 #
 #>
 ######################################################################
@@ -286,15 +312,16 @@ p6_obj_iter_more() {
   local index=$(p6_obj_iter_index "$obj" "$var")
   local len=$(p6_obj_length "$obj")
 
-  local bool=$(p6_math_le "$index" "$len")
+  p6_math_lt "$index" "$len"
+  local rc=$?
 
-  if ! $bool; then
+  if [ $rc -ne 0 ]; then
     p6_store_iter_destroy "$obj" "$var"
   fi
 
-  p6_obj__debug "iter_more(): [var=$var] [index=$index] [len=$len] -> [bool=$bool]"
+  p6_obj__debug "iter_more(): [var=$var] [index=$index] [len=$len] -> [rc=$rc]"
 
-  p6_return_bool "$ool"
+  p6_return_code_as_code "$rc"
 }
 
 ######################################################################
@@ -317,7 +344,9 @@ p6_obj_iter_i() {
   local var="${2:-default}"
   local i="$3"
 
+  p6_obj__debug "iter_i(): [obj=$obj] [var=$var] [i=$i]"
   local item=$(p6_obj__dispatch "$obj" "iter_i" "$var" "$i")
+  p6_obj__debug "iter_i(): -> [item=$item]"
 
   p6_return_item "$item"
 }
@@ -340,8 +369,13 @@ p6_obj_iter_current() {
   local obj="$1"
   local var="${2:-default}"
 
+  p6_obj__debug "iter_current(): [obj=$obj] [var=$var]"
+
   local index=$(p6_obj_iter_index "$obj" "$var")
+  p6_obj__debug "iter_current(): [index=$index]"
+
   local item=$(p6_obj_iter_i "$obj" "$var" "$index")
+  p6_obj__debug "iter_current(): [item=$item]"
 
   p6_return_item "$item"
 }
@@ -371,12 +405,13 @@ p6_obj_iter_ate() {
 ######################################################################
 #<
 #
-# Function: p6_obj_iter_foreach(obj, var, callback)
+# Function: p6_obj_iter_foreach(obj, var, callback, args)
 #
 #  Args:
 #	obj - 
 #	var - 
 #	callback - 
+#	args - 
 #
 #>
 ######################################################################
@@ -384,18 +419,76 @@ p6_obj_iter_foreach() {
     local obj="$1"
     local var="$2"
     local callback="$3"
+    local args="$4"
+
     shift 3
 
     p6_obj__debug "foreach(): [obj=$obj] [var=$var] [callback=$callback]"
-    while p6_obj_iter_more "$obj"; do
-	local item=$(p6_obj_iter_current "$obj")
+    while p6_obj_iter_more "$obj" "$var"; do
+	local item=$(p6_obj_iter_current "$obj" "$var")
 
-	p6_yield "$callback" "$obj" "$item"
+	local key=$(p6_obj_item_key "$item")
+	local val=$(p6_obj_item_value "$item")
 
-	p6_obj_iter_ate "$obj"
+	local func="$callback"
+	func=$(echo "$func" | sed -e "s,%%key%%,$key,g")
+
+	p6_run_yield "$func" "$val"
+
+	p6_obj_iter_ate "$obj" "$var"
     done
 
     p6_return_void
+}
+
+######################################################################
+#<
+#
+# Function: str key = p6_obj_item_key(item)
+#
+#  Args:
+#	item - 
+#
+#  Returns:
+#	str - key
+#
+#>
+######################################################################
+p6_obj_item_key() {
+    local item="$1"
+
+    # XXX: hack
+    local key_file="$item/key"
+    local key=$(p6_file_display "$key_file")
+
+    p6_obj__debug "item_key(): [item=$item] [key=$key]"
+
+    p6_return_str "$key"
+}
+
+######################################################################
+#<
+#
+# Function: str val = p6_obj_item_value(item)
+#
+#  Args:
+#	item - 
+#
+#  Returns:
+#	str - val
+#
+#>
+######################################################################
+p6_obj_item_value() {
+    local item="$1"
+
+    # XXX: hack
+    local val_file="$item/value"
+    local val=$(p6_file_display "$val_file")
+
+    p6_obj__debug "item_value(): [item=$item] [val=$val]"
+
+    p6_return_str "$val"
 }
 
 ######################################################################
@@ -422,7 +515,7 @@ p6_obj_class() {
   if ! p6_string_blank "$new"; then
     old_class=$(p6_store_hash_set "$obj" "$meta_key" "class" "$new")
   else
-    old_class=$(p6_store_hash_set "$obj" "$meta_key" "class")
+    old_class=$(p6_store_hash_get "$obj" "$meta_key" "class")
   fi
 
   p6_return_str "$old_class"
@@ -431,24 +524,31 @@ p6_obj_class() {
 ######################################################################
 #<
 #
-# Function: size_t length = p6_obj_length(obj)
+# Function: size_t old_length = p6_obj_length(obj, new)
 #
 #  Args:
 #	obj - 
+#	new - 
 #
 #  Returns:
-#	size_t - length
+#	size_t - old_length
 #
 #>
 ######################################################################
 p6_obj_length() {
   local obj="$1"
+  local new="$2"
 
   local meta_key=$(p6_obj__meta__key)
 
-  local length=$(p6_store_hash_get "$obj" "$meta_key" "length")
+  local old_length
+  if ! p6_string_blank "$new"; then
+      old_length=$(p6_store_hash_set "$obj" "$meta_key" "length" "$new")
+  else
+      old_length=$(p6_store_hash_get "$obj" "$meta_key" "length")
+  fi
 
-  p6_return_size_t "$length"
+  p6_return_size_t "$old_length"
 }
 
 ######################################################################
@@ -630,10 +730,14 @@ p6_obj__dispatch() {
   local method="$2"
   shift 2
 
-  local class=$(p6_obj_class "$obj")
+  if ! p6_obj_is "$obj"; then
+      p6_return_void
+  else
+      local class=$(p6_obj_class "$obj")
 
-  p6_obj__debug "__dispatch(): [obj=$obj] [method=$method] [class=$class] [$@]"
-  p6_store_${class}_${method} "$obj" "$@"
+      p6_obj__debug "__dispatch(): [class=$class] [obj=$obj] [method=$method] [$*]"
+      p6_store_${class}_${method} "$obj" "$@"
+  fi
 }
 
 ######################################################################

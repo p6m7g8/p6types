@@ -62,6 +62,31 @@ p6_store_iter_destroy() {
 ######################################################################
 #<
 #
+# Function: code rc = p6_store_iter_exists(store, name)
+#
+#  Args:
+#	store - 
+#	name - 
+#
+#  Returns:
+#	code - rc
+#
+#>
+######################################################################
+p6_store_iter_exists() {
+    local store="$1"
+    local name="$2"
+
+    local disk_dir=$(p6_store__disk "$store" "$name")
+    p6_dir_exists "$disk_dir"
+    local rc=$?
+
+    p6_return_code_as_code "$rc"
+}
+
+######################################################################
+#<
+#
 # Function: size_t val = p6_store_iter_current(store, name)
 #
 #  Args:
@@ -77,8 +102,13 @@ p6_store_iter_current() {
     local store="$1" # the store
     local name="$2"  # the name of the iterator
 
+    p6_store_iter__debug "current(): [store=$store] [name=$name]"
     local disk_dir=$(p6_store__disk "$store" "$name")
-    local val=$(p6_file_display "$disk_dir/data")
+    local file="$disk_dir/data"
+
+    local val=$(p6_file_display "$file")
+
+    p6_store_iter__debug "current(): -> [val=$val]"
 
     p6_return_size_t "$val" # value of the iterator
 }

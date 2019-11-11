@@ -36,6 +36,19 @@ p6_store_string_create() {
     p6_return_void
 }
 
+######################################################################
+#<
+#
+# Function: str old_val = p6_store_string_item_set(store)
+#
+#  Args:
+#	store - the store
+#
+#  Returns:
+#	str - old_val
+#
+#>
+######################################################################
 p6_store_string_item_set() {
     local store="$1" # the store
     shift 1
@@ -47,6 +60,19 @@ p6_store_string_item_set() {
     p6_return_str "$old_val"
 }
 
+######################################################################
+#<
+#
+# Function: str val = p6_store_string_item_get(store)
+#
+#  Args:
+#	store - the store
+#
+#  Returns:
+#	str - val
+#
+#>
+######################################################################
 p6_store_string_item_get() {
     local store="$1" # the store
     shift 1
