@@ -36,6 +36,28 @@ p6_store_string_create() {
     p6_return_void
 }
 
+p6_store_string_item_set() {
+    local store="$1" # the store
+    shift 1
+
+    p6_store_string__debug "item_set(): [store=$store] data [@=$@]"
+    local old_val=$(p6_store_string_set "$store" "data" "$@")
+    p6_store_string__debug "item_set(): [old_val=$old_val]"
+
+    p6_return_str "$old_val"
+}
+
+p6_store_string_item_get() {
+    local store="$1" # the store
+    shift 1
+
+    p6_store_string__debug "item_get(): [store=$store] data [@=$@]"
+    local val=$(p6_store_string_get "$store" "data" "$@")
+    p6_store_string__debug "item_get(): [val=$val]"
+
+    p6_return_str "$val"
+}
+
 ######################################################################
 #<
 #
