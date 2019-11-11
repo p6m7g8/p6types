@@ -161,6 +161,15 @@ p6_obj_display() {
   p6_return_void
 }
 
+p6_obj_is() {
+    local obj="$1"
+
+    p6_dir_exists "$obj"
+    local rc=$?
+
+    p6_return_code_as_code "$rc"
+}
+
 ######################################################################
 #<
 #
