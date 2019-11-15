@@ -405,13 +405,13 @@ p6_obj_iter_ate() {
 ######################################################################
 #<
 #
-# Function: p6_obj_iter_foreach(obj, var, callback, args)
+# Function: p6_obj_iter_foreach(obj, var, callback, [filter_callback=])
 #
 #  Args:
 #	obj - 
 #	var - 
 #	callback - 
-#	args - 
+#	OPTIONAL filter_callback -  []
 #
 #>
 ######################################################################
@@ -419,9 +419,8 @@ p6_obj_iter_foreach() {
     local obj="$1"
     local var="$2"
     local callback="$3"
-    local args="$4"
-
-    shift 3
+    local filter_callback="${4:-}"
+    shift 4
 
     p6_obj__debug "foreach(): [obj=$obj] [var=$var] [callback=$callback]"
     while p6_obj_iter_more "$obj" "$var"; do
@@ -433,7 +432,11 @@ p6_obj_iter_foreach() {
 	local func="$callback"
 	func=$(echo "$func" | sed -e "s,%%key%%,$key,g")
 
-	p6_run_yield "$func" "$val"
+        if ! p6_string_blank "$filter_callback"; then
+    	    if p6_run_code "$filter_callback \"$key\""; then
+	        p6_run_yield "$func" "$val"
+	    fi
+        fi
 
 	p6_obj_iter_ate "$obj" "$var"
     done
