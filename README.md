@@ -47,6 +47,7 @@
 - str val = p6_store_string_set(store, name, new)
 
 ### api.sh:
+- bool bool = p6_obj_persist_is(obj)
 - code rc = p6_obj_is(obj)
 - code rc = p6_obj_iter_more(obj, [var=default])
 - item item = p6_obj_iter_current(obj, [var=default])
@@ -63,6 +64,8 @@
 - p6_obj_iter_ate(obj, [var=default], [move=1])
 - p6_obj_iter_foreach(obj, var, callback, [filter_callback=])
 - p6_obj_lc(obj)
+- p6_obj_persist(obj)
+- p6_obj_persist_un(obj)
 - p6_obj_reverse(obj)
 - p6_obj_splice(obj, start, new)
 - p6_obj_trim(obj)

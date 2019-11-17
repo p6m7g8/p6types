@@ -177,7 +177,7 @@ p6_obj_display() {
 p6_obj_is() {
     local obj="$1"
 
-    p6_dir_exists "$obj"
+    p6_store_is "$obj"
     local rc=$?
 
     p6_return_code_as_code "$rc"
@@ -492,6 +492,64 @@ p6_obj_item_value() {
     p6_obj__debug "item_value(): [item=$item] [val=$val]"
 
     p6_return_str "$val"
+}
+
+######################################################################
+#<
+#
+# Function: p6_obj_persist(obj)
+#
+#  Args:
+#	obj - 
+#
+#>
+######################################################################
+p6_obj_persist() {
+    local obj="$1"
+
+    p6_store_persist "$obj"
+
+    p6_return_void
+}
+
+######################################################################
+#<
+#
+# Function: p6_obj_persist_un(obj)
+#
+#  Args:
+#	obj - 
+#
+#>
+######################################################################
+p6_obj_persist_un() {
+    local obj="$1"
+
+    p6_store_persist_un "$obj"
+
+    p6_return_void
+}
+
+######################################################################
+#<
+#
+# Function: bool bool = p6_obj_persist_is(obj)
+#
+#  Args:
+#	obj - 
+#
+#  Returns:
+#	bool - bool
+#
+#>
+######################################################################
+p6_obj_persist_is() {
+    local obj="$1"
+
+    p6_store_persist_is "$obj"
+    local bool=$?
+
+    p6_return_bool "$bool"
 }
 
 ######################################################################
