@@ -117,6 +117,86 @@ p6_store_copy() {
 ######################################################################
 #<
 #
+# Function: code rc = p6_store_is(store)
+#
+#  Args:
+#	store - 
+#
+#  Returns:
+#	code - rc
+#
+#>
+######################################################################
+p6_store_is() {
+    local store="$1"
+
+    p6_transient_is "$store"
+    local rc=$?
+
+    p6_return_code_as_code "$rc"
+}
+
+######################################################################
+#<
+#
+# Function: p6_store_persist(store)
+#
+#  Args:
+#	store - 
+#
+#>
+######################################################################
+p6_store_persist() {
+    local store="$1"
+
+    p6_transient_persist "$store"
+
+    p6_return_void
+}
+
+######################################################################
+#<
+#
+# Function: p6_store_persist_un(store)
+#
+#  Args:
+#	store - 
+#
+#>
+######################################################################
+p6_store_persist_un() {
+    local store="$1"
+
+    p6_transient_persist_un "$store"
+
+    p6_return_void
+}
+
+######################################################################
+#<
+#
+# Function: code rc = p6_store_persist_is(store)
+#
+#  Args:
+#	store - 
+#
+#  Returns:
+#	code - rc
+#
+#>
+######################################################################
+p6_store_persist_is() {
+    local store="$1"
+
+    p6_transient_persist_is "$store"
+    local rc=$?
+
+    p6_return_code_as_code "$rc"
+}
+
+######################################################################
+#<
+#
 # Function: p6_store__init_structure(store, name)
 #
 #  Args:

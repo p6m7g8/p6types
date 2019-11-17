@@ -1,8 +1,12 @@
 ### _store.sh:
+- code rc = p6_store_is(store)
+- code rc = p6_store_persist_is(store)
 - obj copy = p6_store_copy(store)
 - obj ref = p6_store_ref(store)
 - obj store = p6_store_create(name, max_objs)
 - p6_store_destroy(store)
+- p6_store_persist(store)
+- p6_store_persist_un(store)
 
 ### hash.sh:
 - item pair_dir = p6_store_hash_iter_i(store, key, i)
