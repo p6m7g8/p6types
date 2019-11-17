@@ -432,11 +432,11 @@ p6_obj_iter_foreach() {
 	local func="$callback"
 	func=$(echo "$func" | sed -e "s,%%key%%,$key,g")
 
-        if ! p6_string_blank "$filter_callback"; then
-    	    if p6_run_code "$filter_callback \"$key\""; then
-	        p6_run_yield "$func" "$val"
+	if ! p6_string_blank "$filter_callback"; then
+	    if p6_run_code "$filter_callback \"$key\""; then
+		p6_run_yield "$func" "$val"
 	    fi
-        fi
+	fi
 
 	p6_obj_iter_ate "$obj" "$var"
     done
@@ -687,8 +687,9 @@ p6_obj__meta_init() {
   local class="$2"
 
   local meta_key=$(p6_obj__meta__key)
+  local iterator_key=$(p6_obj__iterator_key)
 
-  p6_store_hash_create "$obj" "iterators"
+  p6_store_hash_create "$obj" "$iterator_key"
 
   p6_store_hash_create "$obj" "$meta_key"
   local old_class=$(p6_store_hash_set "$obj" "$meta_key" "class" "$class")
@@ -771,4 +772,19 @@ p6_obj__meta__key() {
 p6_obj__data__key() {
 
     p6_return_str "data"
+}
+
+######################################################################
+#<
+#
+# Function: str iterators = p6_obj__iterator_key()
+#
+#  Returns:
+#	str - iterators
+#
+#>
+######################################################################
+p6_obj__iterator_key() {
+
+    p6_return_str "iterators"
 }

@@ -57,7 +57,7 @@
 - p6_obj_item_delete(obj)
 - p6_obj_item_get(obj)
 - p6_obj_iter_ate(obj, [var=default], [move=1])
-- p6_obj_iter_foreach(obj, var, callback, args)
+- p6_obj_iter_foreach(obj, var, callback, [filter_callback=])
 - p6_obj_lc(obj)
 - p6_obj_reverse(obj)
 - p6_obj_splice(obj, start, new)
@@ -72,6 +72,6 @@
 - str val = p6_obj_item_value(item)
 
 ### p6_return.sh:
-- p6_return_item(item)
-- p6_return_obj()
+- path item = p6_return_item(item)
+- path obj = p6_return_obj()
 
