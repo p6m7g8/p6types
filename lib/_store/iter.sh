@@ -44,17 +44,20 @@ p6_store_iter_create() {
 ######################################################################
 #<
 #
-# Function: p6_store_iter_destroy(obj)
+# Function: p6_store_iter_destroy(store, name)
 #
 #  Args:
-#	obj - 
+#	store - 
+#	name - 
 #
 #>
 ######################################################################
 p6_store_iter_destroy() {
-    local obj="$1"
+    local store="$1"
+    local name="$2"
 
-    p6_store_destroy "$obj"
+    local disk_dir=$(p6_store__disk "$store" "$name")
+    p6_store_destroy "$disk_dir"
 
     p6_return_void
 }
