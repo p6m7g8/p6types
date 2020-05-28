@@ -13,14 +13,14 @@
 - p6_store_hash_create(store, name)
 - str old = p6_store_hash_set(store, name, key, val)
 - str old_val = p6_store_hash_delete(store, name, key)
-- str old_val = p6_store_hash_item_set(store)
+- str old_val = p6_store_hash_item_set(store, ...)
 - str val = p6_store_hash_get(store, name, key)
-- str val = p6_store_hash_item_get(store)
+- str val = p6_store_hash_item_get(store, ...)
 
 ### iter.sh:
 - code rc = p6_store_iter_exists(store, name)
 - p6_store_iter_create(store, name)
-- p6_store_iter_destroy(obj)
+- p6_store_iter_destroy(store, name)
 - p6_store_iter_move(store, name, delta)
 - size_t val = p6_store_iter_current(store, name)
 
@@ -31,8 +31,8 @@
 - p6_store_list_set(store, name, i_val, new)
 - size_t j = p6_store_list_item_delete(store, name, old)
 - str i_val = p6_store_list_add(store, name, new)
-- str old_val = p6_store_list_item_set(store)
-- str val = p6_store_list_item_get(store)
+- str old_val = p6_store_list_item_set(store, ...)
+- str val = p6_store_list_item_get(store, ...)
 
 ### scalar.sh:
 - p6_store_scalar_create(store, name)
@@ -41,9 +41,9 @@
 
 ### string.sh:
 - p6_store_string_create(store, name)
-- str old_val = p6_store_string_item_set(store)
+- str old_val = p6_store_string_item_set(store, ...)
 - str val = p6_store_string_get(store, name)
-- str val = p6_store_string_item_get(store)
+- str val = p6_store_string_item_get(store, ...)
 - str val = p6_store_string_set(store, name, new)
 
 ### api.sh:
@@ -58,11 +58,11 @@
 - obj rlist = p6_obj_grep(obj, pattern)
 - p6_obj_destroy(obj)
 - p6_obj_display(obj)
-- p6_obj_item_add(obj)
-- p6_obj_item_delete(obj)
-- p6_obj_item_get(obj)
+- p6_obj_item_add(obj, ...)
+- p6_obj_item_delete(obj, ...)
+- p6_obj_item_get(obj, ...)
 - p6_obj_iter_ate(obj, [var=default], [move=1])
-- p6_obj_iter_foreach(obj, var, callback, [filter_callback=])
+- p6_obj_iter_foreach(obj, var, callback, [filter_callback=], ...)
 - p6_obj_lc(obj)
 - p6_obj_persist(obj)
 - p6_obj_persist_un(obj)
@@ -75,7 +75,7 @@
 - size_t rc = p6_obj_compare(a, b)
 - str key = p6_obj_item_key(item)
 - str old_class = p6_obj_class(obj, new)
-- str old_val = p6_obj_item_set(obj)
+- str old_val = p6_obj_item_set(obj, ...)
 - str val = p6_obj_item_value(item)
 
 ### p6_return.sh:
