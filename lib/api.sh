@@ -186,10 +186,11 @@ p6_obj_is() {
 ######################################################################
 #<
 #
-# Function: p6_obj_item_get(obj)
+# Function: p6_obj_item_get(obj, ...)
 #
 #  Args:
 #	obj - 
+#	... - 
 #
 #>
 ######################################################################
@@ -203,10 +204,11 @@ p6_obj_item_get() {
 ######################################################################
 #<
 #
-# Function: str old_val = p6_obj_item_set(obj)
+# Function: str old_val = p6_obj_item_set(obj, ...)
 #
 #  Args:
 #	obj - 
+#	... - 
 #
 #  Returns:
 #	str - old_val
@@ -227,10 +229,11 @@ p6_obj_item_set() {
 ######################################################################
 #<
 #
-# Function: p6_obj_item_add(obj)
+# Function: p6_obj_item_add(obj, ...)
 #
 #  Args:
 #	obj - 
+#	... - 
 #
 #>
 ######################################################################
@@ -244,10 +247,11 @@ p6_obj_item_add() {
 ######################################################################
 #<
 #
-# Function: p6_obj_item_delete(obj)
+# Function: p6_obj_item_delete(obj, ...)
 #
 #  Args:
 #	obj - 
+#	... - 
 #
 #>
 ######################################################################
@@ -405,13 +409,14 @@ p6_obj_iter_ate() {
 ######################################################################
 #<
 #
-# Function: p6_obj_iter_foreach(obj, var, callback, [filter_callback=])
+# Function: p6_obj_iter_foreach(obj, var, callback, [filter_callback=], ...)
 #
 #  Args:
 #	obj - 
 #	var - 
 #	callback - 
 #	OPTIONAL filter_callback -  []
+#	... - 
 #
 #>
 ######################################################################
@@ -779,11 +784,12 @@ p6_obj__data_init() {
 ######################################################################
 #<
 #
-# Function: p6_obj__dispatch(obj, method)
+# Function: p6_obj__dispatch(obj, method, ...)
 #
 #  Args:
 #	obj - 
 #	method - 
+#	... - 
 #
 #>
 ######################################################################
