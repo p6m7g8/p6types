@@ -1,3 +1,8 @@
+### init.zsh:
+- p6df::modules::p6types::deps()
+- p6df::modules::p6types::init()
+- p6df::modules::p6types::version()
+
 ### _store.sh:
 - code rc = p6_store_is(store)
 - code rc = p6_store_persist_is(store)
