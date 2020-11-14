@@ -21,7 +21,7 @@
 # Function: p6_obj__debug(msg)
 #
 #  Args:
-#	msg - 
+#	msg -
 #
 #>
 ######################################################################
@@ -39,8 +39,8 @@ p6_obj__debug() {
 # Function: obj obj = p6_obj_create([class=obj], [max_objs=])
 #
 #  Args:
-#	OPTIONAL class -  [obj]
-#	OPTIONAL max_objs -  []
+#	OPTIONAL class - [obj]
+#	OPTIONAL max_objs - []
 #
 #  Returns:
 #	obj - obj
@@ -64,7 +64,7 @@ p6_obj_create() {
 # Function: obj copy = p6_obj_copy(obj)
 #
 #  Args:
-#	obj - 
+#	obj -
 #
 #  Returns:
 #	obj - copy
@@ -89,7 +89,7 @@ p6_obj_copy() {
 # Function: p6_obj_destroy(obj)
 #
 #  Args:
-#	obj - 
+#	obj -
 #
 #>
 ######################################################################
@@ -107,8 +107,8 @@ p6_obj_destroy() {
 # Function: size_t rc = p6_obj_compare(a, b)
 #
 #  Args:
-#	a - 
-#	b - 
+#	a -
+#	b -
 #
 #  Returns:
 #	size_t - rc
@@ -130,7 +130,7 @@ p6_obj_compare() {
 # Function: obj obj = p6_obj_assign(obj)
 #
 #  Args:
-#	obj - 
+#	obj -
 #
 #  Returns:
 #	obj - obj
@@ -149,7 +149,7 @@ p6_obj_assign() {
 # Function: p6_obj_display(obj)
 #
 #  Args:
-#	obj - 
+#	obj -
 #
 #>
 ######################################################################
@@ -167,7 +167,7 @@ p6_obj_display() {
 # Function: code rc = p6_obj_is(obj)
 #
 #  Args:
-#	obj - 
+#	obj -
 #
 #  Returns:
 #	code - rc
@@ -189,7 +189,7 @@ p6_obj_is() {
 # Function: p6_obj_item_get(obj, ...)
 #
 #  Args:
-#	obj - 
+#	obj -
 #	... - 
 #
 #>
@@ -207,7 +207,7 @@ p6_obj_item_get() {
 # Function: str old_val = p6_obj_item_set(obj, ...)
 #
 #  Args:
-#	obj - 
+#	obj -
 #	... - 
 #
 #  Returns:
@@ -232,7 +232,7 @@ p6_obj_item_set() {
 # Function: p6_obj_item_add(obj, ...)
 #
 #  Args:
-#	obj - 
+#	obj -
 #	... - 
 #
 #>
@@ -250,7 +250,7 @@ p6_obj_item_add() {
 # Function: p6_obj_item_delete(obj, ...)
 #
 #  Args:
-#	obj - 
+#	obj -
 #	... - 
 #
 #>
@@ -268,8 +268,8 @@ p6_obj_item_delete() {
 # Function: size_t index = p6_obj_iter_index(obj, [var=default])
 #
 #  Args:
-#	obj - 
-#	OPTIONAL var -  [default]
+#	obj -
+#	OPTIONAL var - [default]
 #
 #  Returns:
 #	size_t - index
@@ -297,8 +297,8 @@ p6_obj_iter_index() {
 # Function: code rc = p6_obj_iter_more(obj, [var=default])
 #
 #  Args:
-#	obj - 
-#	OPTIONAL var -  [default]
+#	obj -
+#	OPTIONAL var - [default]
 #
 #  Returns:
 #	code - rc
@@ -334,9 +334,9 @@ p6_obj_iter_more() {
 # Function: item item = p6_obj_iter_i(obj, [var=default], i)
 #
 #  Args:
-#	obj - 
-#	OPTIONAL var -  [default]
-#	i - 
+#	obj -
+#	OPTIONAL var - [default]
+#	i -
 #
 #  Returns:
 #	item - item
@@ -361,8 +361,8 @@ p6_obj_iter_i() {
 # Function: item item = p6_obj_iter_current(obj, [var=default])
 #
 #  Args:
-#	obj - 
-#	OPTIONAL var -  [default]
+#	obj -
+#	OPTIONAL var - [default]
 #
 #  Returns:
 #	item - item
@@ -390,9 +390,9 @@ p6_obj_iter_current() {
 # Function: p6_obj_iter_ate(obj, [var=default], [move=1])
 #
 #  Args:
-#	obj - 
-#	OPTIONAL var -  [default]
-#	OPTIONAL move -  [1]
+#	obj -
+#	OPTIONAL var - [default]
+#	OPTIONAL move - [1]
 #
 #>
 ######################################################################
@@ -412,10 +412,10 @@ p6_obj_iter_ate() {
 # Function: p6_obj_iter_foreach(obj, var, callback, [filter_callback=], ...)
 #
 #  Args:
-#	obj - 
-#	var - 
-#	callback - 
-#	OPTIONAL filter_callback -  []
+#	obj -
+#	var -
+#	callback -
+#	OPTIONAL filter_callback - []
 #	... - 
 #
 #>
@@ -455,7 +455,7 @@ p6_obj_iter_foreach() {
 # Function: str key = p6_obj_item_key(item)
 #
 #  Args:
-#	item - 
+#	item -
 #
 #  Returns:
 #	str - key
@@ -480,7 +480,7 @@ p6_obj_item_key() {
 # Function: str val = p6_obj_item_value(item)
 #
 #  Args:
-#	item - 
+#	item -
 #
 #  Returns:
 #	str - val
@@ -505,7 +505,7 @@ p6_obj_item_value() {
 # Function: p6_obj_persist(obj)
 #
 #  Args:
-#	obj - 
+#	obj -
 #
 #>
 ######################################################################
@@ -523,7 +523,7 @@ p6_obj_persist() {
 # Function: p6_obj_persist_un(obj)
 #
 #  Args:
-#	obj - 
+#	obj -
 #
 #>
 ######################################################################
@@ -541,7 +541,7 @@ p6_obj_persist_un() {
 # Function: bool bool = p6_obj_persist_is(obj)
 #
 #  Args:
-#	obj - 
+#	obj -
 #
 #  Returns:
 #	bool - bool
@@ -563,8 +563,8 @@ p6_obj_persist_is() {
 # Function: str old_class = p6_obj_class(obj, new)
 #
 #  Args:
-#	obj - 
-#	new - 
+#	obj -
+#	new -
 #
 #  Returns:
 #	str - old_class
@@ -593,8 +593,8 @@ p6_obj_class() {
 # Function: size_t old_length = p6_obj_length(obj, new)
 #
 #  Args:
-#	obj - 
-#	new - 
+#	obj -
+#	new -
 #
 #  Returns:
 #	size_t - old_length
@@ -623,8 +623,8 @@ p6_obj_length() {
 # Function: obj rlist = p6_obj_grep(obj, pattern)
 #
 #  Args:
-#	obj - 
-#	pattern - 
+#	obj -
+#	pattern -
 #
 #  Returns:
 #	obj - rlist
@@ -646,7 +646,7 @@ p6_obj_grep() {
 # Function: p6_obj_reverse(obj)
 #
 #  Args:
-#	obj - 
+#	obj -
 #
 #>
 ######################################################################
@@ -664,9 +664,9 @@ p6_obj_reverse() {
 # Function: p6_obj_splice(obj, start, new)
 #
 #  Args:
-#	obj - 
-#	start - 
-#	new - 
+#	obj -
+#	start -
+#	new -
 #
 #>
 ######################################################################
@@ -686,7 +686,7 @@ p6_obj_splice() {
 # Function: p6_obj_trim(obj)
 #
 #  Args:
-#	obj - 
+#	obj -
 #
 #>
 ######################################################################
@@ -704,7 +704,7 @@ p6_obj_trim() {
 # Function: p6_obj_lc(obj)
 #
 #  Args:
-#	obj - 
+#	obj -
 #
 #>
 ######################################################################
@@ -722,7 +722,7 @@ p6_obj_lc() {
 # Function: p6_obj_uc(obj)
 #
 #  Args:
-#	obj - 
+#	obj -
 #
 #>
 ######################################################################
@@ -740,8 +740,8 @@ p6_obj_uc() {
 # Function: p6_obj__meta_init(obj, class)
 #
 #  Args:
-#	obj - 
-#	class - 
+#	obj -
+#	class -
 #
 #>
 ######################################################################
@@ -767,7 +767,7 @@ p6_obj__meta_init() {
 # Function: p6_obj__data_init(obj)
 #
 #  Args:
-#	obj - 
+#	obj -
 #
 #>
 ######################################################################
@@ -787,8 +787,8 @@ p6_obj__data_init() {
 # Function: p6_obj__dispatch(obj, method, ...)
 #
 #  Args:
-#	obj - 
-#	method - 
+#	obj -
+#	method -
 #	... - 
 #
 #>

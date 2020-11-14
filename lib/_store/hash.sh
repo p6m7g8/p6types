@@ -4,7 +4,7 @@
 # Function: p6_store_hash__debug(msg)
 #
 #  Args:
-#	msg - 
+#	msg -
 #
 #>
 ######################################################################
@@ -74,7 +74,7 @@ p6_store_hash_get() {
 # Function: str old_val = p6_store_hash_item_set(store, ...)
 #
 #  Args:
-#	store - 
+#	store -
 #	... - 
 #
 #  Returns:
@@ -99,7 +99,7 @@ p6_store_hash_item_set() {
 # Function: str val = p6_store_hash_item_get(store, ...)
 #
 #  Args:
-#	store - 
+#	store -
 #	... - 
 #
 #  Returns:
@@ -124,9 +124,9 @@ p6_store_hash_item_get() {
 # Function: item pair_dir = p6_store_hash_iter_i(store, key, i)
 #
 #  Args:
-#	store - 
-#	key - 
-#	i - 
+#	store -
+#	key -
+#	i -
 #
 #  Returns:
 #	item - pair_dir

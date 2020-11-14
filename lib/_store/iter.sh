@@ -4,7 +4,7 @@
 # Function: p6_store_iter__debug(msg)
 #
 #  Args:
-#	msg - 
+#	msg -
 #
 #>
 ######################################################################
@@ -47,8 +47,8 @@ p6_store_iter_create() {
 # Function: p6_store_iter_destroy(store, name)
 #
 #  Args:
-#	store - 
-#	name - 
+#	store -
+#	name -
 #
 #>
 ######################################################################
@@ -68,8 +68,8 @@ p6_store_iter_destroy() {
 # Function: code rc = p6_store_iter_exists(store, name)
 #
 #  Args:
-#	store - 
-#	name - 
+#	store -
+#	name -
 #
 #  Returns:
 #	code - rc

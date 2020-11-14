@@ -4,7 +4,7 @@
 # Function: p6_store_list__debug(msg)
 #
 #  Args:
-#	msg - 
+#	msg -
 #
 #>
 ######################################################################
@@ -42,7 +42,7 @@ p6_store_list_create() {
 # Function: str old_val = p6_store_list_item_set(store, ...)
 #
 #  Args:
-#	store - 
+#	store -
 #	... - 
 #
 #  Returns:
@@ -66,7 +66,7 @@ p6_store_list_item_set() {
 # Function: str val = p6_store_list_item_get(store, ...)
 #
 #  Args:
-#	store - 
+#	store -
 #	... - 
 #
 #  Returns:
