@@ -22,7 +22,7 @@ p6_return_obj() {
 # Function: path item = p6_return_item(item)
 #
 #  Args:
-#	item - 
+#	item -
 #
 #  Returns:
 #	path - item

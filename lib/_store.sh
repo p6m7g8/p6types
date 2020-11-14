@@ -120,7 +120,7 @@ p6_store_copy() {
 # Function: code rc = p6_store_is(store)
 #
 #  Args:
-#	store - 
+#	store -
 #
 #  Returns:
 #	code - rc
@@ -142,7 +142,7 @@ p6_store_is() {
 # Function: p6_store_persist(store)
 #
 #  Args:
-#	store - 
+#	store -
 #
 #>
 ######################################################################
@@ -160,7 +160,7 @@ p6_store_persist() {
 # Function: p6_store_persist_un(store)
 #
 #  Args:
-#	store - 
+#	store -
 #
 #>
 ######################################################################
@@ -178,7 +178,7 @@ p6_store_persist_un() {
 # Function: code rc = p6_store_persist_is(store)
 #
 #  Args:
-#	store - 
+#	store -
 #
 #  Returns:
 #	code - rc
