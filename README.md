@@ -1,8 +1,49 @@
-### init.zsh:
+TAG LINE
+# .
+
+## Table of Contents
+
+
+### .
+- [.](#.)
+  - [Badges](#badges)
+  - [Distributions](#distributions)
+  - [Summary](#summary)
+  - [Contributing](#contributing)
+  - [Code of Conduct](#code-of-conduct)
+  - [Changes](#changes)
+    - [Usage](#usage)
+  - [Author](#author)
+
+### Badges
+
+[![License](https://img.shields.io/badge/License-Apache%202.0-yellowgreen.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/p6m7g8/.)
+[![Mergify](https://img.shields.io/endpoint.svg?url=https://gh.mergify.io/badges/p6m7g8/./&style=flat)](https://mergify.io)
+
+## Summary
+
+## Contributing
+
+- [How to Contribute](CONTRIBUTING.md)
+
+## Code of Conduct
+
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+
+## Changes
+
+- [Change Log](CHANGELOG.md)
+
+### Usage
+
+#### init.zsh:
+
 - p6df::modules::p6types::deps()
 - p6df::modules::p6types::init()
 
-### _store.sh:
+#### _store.sh:
+
 - code rc = p6_store_is(store)
 - code rc = p6_store_persist_is(store)
 - obj copy = p6_store_copy(store)
@@ -12,7 +53,8 @@
 - p6_store_persist(store)
 - p6_store_persist_un(store)
 
-### hash.sh:
+#### hash.sh:
+
 - item pair_dir = p6_store_hash_iter_i(store, key, i)
 - p6_store_hash_create(store, name)
 - str old = p6_store_hash_set(store, name, key, val)
@@ -21,14 +63,16 @@
 - str val = p6_store_hash_get(store, name, key)
 - str val = p6_store_hash_item_get(store, ...)
 
-### iter.sh:
+#### iter.sh:
+
 - code rc = p6_store_iter_exists(store, name)
 - p6_store_iter_create(store, name)
 - p6_store_iter_destroy(store, name)
 - p6_store_iter_move(store, name, delta)
 - size_t val = p6_store_iter_current(store, name)
 
-### list.sh:
+#### list.sh:
+
 - item item = p6_store_list_get(store, name, i)
 - item old = p6_store_list_delete(store, name, i)
 - p6_store_list_create(store, name)
@@ -38,19 +82,22 @@
 - str old_val = p6_store_list_item_set(store, ...)
 - str val = p6_store_list_item_get(store, ...)
 
-### scalar.sh:
+#### scalar.sh:
+
 - p6_store_scalar_create(store, name)
 - str val = p6_store_scalar_get(store, name)
 - str val = p6_store_scalar_set(store, name, new)
 
-### string.sh:
+#### string.sh:
+
 - p6_store_string_create(store, name)
 - str old_val = p6_store_string_item_set(store, ...)
 - str val = p6_store_string_get(store, name)
 - str val = p6_store_string_item_get(store, ...)
 - str val = p6_store_string_set(store, name, new)
 
-### api.sh:
+#### api.sh:
+
 - bool bool = p6_obj_persist_is(obj)
 - code rc = p6_obj_is(obj)
 - code rc = p6_obj_iter_more(obj, [var=default])
@@ -82,7 +129,12 @@
 - str old_val = p6_obj_item_set(obj, ...)
 - str val = p6_obj_item_value(item)
 
-### p6_return.sh:
+#### p6_return.sh:
+
 - path item = p6_return_item(item)
 - path obj = p6_return_obj()
 
+
+## Author
+
+Philip M . Gollucci <pgollucci@p6m7g8.com>
