@@ -38,14 +38,18 @@
 
 - [Change Log](CHANGELOG.md)
 
-### Usage
+## Usage
 
-#### init.zsh:
+### p6types:
+
+#### p6types/init.zsh:
 
 - p6df::modules::p6types::deps()
 - p6df::modules::p6types::init()
 
-#### _store.sh:
+### ../p6types/lib:
+
+#### ../p6types/lib/_store.sh:
 
 - code rc = p6_store_is(store)
 - code rc = p6_store_persist_is(store)
@@ -55,51 +59,7 @@
 - p6_store_destroy(store)
 - p6_store_persist(store)
 - p6_store_persist_un(store)
-
-#### hash.sh:
-
-- item pair_dir = p6_store_hash_iter_i(store, key, i)
-- p6_store_hash_create(store, name)
-- str old = p6_store_hash_set(store, name, key, val)
-- str old_val = p6_store_hash_delete(store, name, key)
-- str old_val = p6_store_hash_item_set(store, ...)
-- str val = p6_store_hash_get(store, name, key)
-- str val = p6_store_hash_item_get(store, ...)
-
-#### iter.sh:
-
-- code rc = p6_store_iter_exists(store, name)
-- p6_store_iter_create(store, name)
-- p6_store_iter_destroy(store, name)
-- p6_store_iter_move(store, name, delta)
-- size_t val = p6_store_iter_current(store, name)
-
-#### list.sh:
-
-- item item = p6_store_list_get(store, name, i)
-- item old = p6_store_list_delete(store, name, i)
-- p6_store_list_create(store, name)
-- p6_store_list_set(store, name, i_val, new)
-- size_t j = p6_store_list_item_delete(store, name, old)
-- str i_val = p6_store_list_add(store, name, new)
-- str old_val = p6_store_list_item_set(store, ...)
-- str val = p6_store_list_item_get(store, ...)
-
-#### scalar.sh:
-
-- p6_store_scalar_create(store, name)
-- str val = p6_store_scalar_get(store, name)
-- str val = p6_store_scalar_set(store, name, new)
-
-#### string.sh:
-
-- p6_store_string_create(store, name)
-- str old_val = p6_store_string_item_set(store, ...)
-- str val = p6_store_string_get(store, name)
-- str val = p6_store_string_item_get(store, ...)
-- str val = p6_store_string_set(store, name, new)
-
-#### api.sh:
+#### ../p6types/lib/api.sh:
 
 - bool bool = p6_obj_persist_is(obj)
 - code rc = p6_obj_is(obj)
@@ -131,11 +91,51 @@
 - str old_class = p6_obj_class(obj, new)
 - str old_val = p6_obj_item_set(obj, ...)
 - str val = p6_obj_item_value(item)
-
-#### p6_return.sh:
+#### ../p6types/lib/p6_return.sh:
 
 - path item = p6_return_item(item)
 - path obj = p6_return_obj()
+
+### _store:
+
+#### _store/hash.sh:
+
+- item pair_dir = p6_store_hash_iter_i(store, key, i)
+- p6_store_hash_create(store, name)
+- str old = p6_store_hash_set(store, name, key, val)
+- str old_val = p6_store_hash_delete(store, name, key)
+- str old_val = p6_store_hash_item_set(store, ...)
+- str val = p6_store_hash_get(store, name, key)
+- str val = p6_store_hash_item_get(store, ...)
+#### _store/iter.sh:
+
+- code rc = p6_store_iter_exists(store, name)
+- p6_store_iter_create(store, name)
+- p6_store_iter_destroy(store, name)
+- p6_store_iter_move(store, name, delta)
+- size_t val = p6_store_iter_current(store, name)
+#### _store/list.sh:
+
+- item item = p6_store_list_get(store, name, i)
+- item old = p6_store_list_delete(store, name, i)
+- p6_store_list_create(store, name)
+- p6_store_list_set(store, name, i_val, new)
+- size_t j = p6_store_list_item_delete(store, name, old)
+- str i_val = p6_store_list_add(store, name, new)
+- str old_val = p6_store_list_item_set(store, ...)
+- str val = p6_store_list_item_get(store, ...)
+#### _store/scalar.sh:
+
+- p6_store_scalar_create(store, name)
+- str val = p6_store_scalar_get(store, name)
+- str val = p6_store_scalar_set(store, name, new)
+#### _store/string.sh:
+
+- p6_store_string_create(store, name)
+- str old_val = p6_store_string_item_set(store, ...)
+- str val = p6_store_string_get(store, name)
+- str val = p6_store_string_item_get(store, ...)
+- str val = p6_store_string_set(store, name, new)
 
 
 ## Author
